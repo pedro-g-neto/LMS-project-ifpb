@@ -11,8 +11,7 @@ def atualizar_banco():
     except sqlite3.OperationalError:
         print("A coluna 'url_capa' provavelmente já existe.")
 
-    # 2. Atualiza as capas dos cursos
-   # 2. Atualiza as capas dos cursos originais
+    # Atualiza as capas dos cursos
     atualizacoes = [
         ("https://img.youtube.com/vi/wC_mwNUT48s/maxresdefault.jpg", 1),
         ("https://img.youtube.com/vi/-twvgnfOnVQ/maxresdefault.jpg", 2),

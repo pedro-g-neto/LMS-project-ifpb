@@ -10,26 +10,9 @@
     margin-bottom: var(--spacing-lg);
 }
 
-/* Espaço para o texto/avatar genérico */
-.profile-avatar {
-    background-color: var(--bg-primary);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.avatar-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-secondary);
-}
 
 .profile-info h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: var(--spacing-sm);
 }
@@ -52,7 +35,7 @@
 
 /* Seção do Dashboard de progresso */
 .dashboard-section h2 {
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
 }

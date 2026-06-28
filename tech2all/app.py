@@ -102,7 +102,7 @@ def login():
             return redirect(url_for('login'))
     return render_template('login.html')
 
-@app.route('/logout')
+@app.route('/logout')   #Vou criar o botão de logout de usuário com base nessa rota <-
 @login_required
 def logout():
     registrar_log_csv("LOGOUT", current_user.email)

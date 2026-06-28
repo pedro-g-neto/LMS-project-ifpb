@@ -14,6 +14,11 @@
                 <h1>{{ current_user.nome }}</h1>
                 <p>{{ current_user.email }}</p>
             </div>
+            <div class="logout">
+                <form action="/logout">
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                </form>
+            </div>
         </section>
 
         <section class="dashboard-section">

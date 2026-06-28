@@ -1,0 +1,40 @@
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main class="main-content">
+        
+        <section class="profile-card">
+            <div class="profile-avatar"></div>
+            <div class="profile-info">
+                <h1>Nome do Aluno Exemplo</h1>
+                <p>email@email.com</p>
+                <span class="badge-autenticado">Aluno Autenticado</span>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Resumo de Progresso</h2>
+            
+            <div class="dashboard-grid">
+                <div class="status-card current">
+                    <div class="status-icon"></div>
+                    <div class="status-data">
+                        <h3>Em Andamento</h3>
+                        <p class="counter">3</p>
+                    </div>
+                </div>
+
+                <div class="status-card completed">
+                    <div class="status-icon"></div>
+                    <div class="status-data">
+                        <h3>Concluídos</h3>
+                        <p class="counter">5</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

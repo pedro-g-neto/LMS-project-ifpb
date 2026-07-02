@@ -8,7 +8,7 @@ O **Tech2ALL** é um Sistema de Gestão de Aprendizagem (LMS) simplificado onde 
 ## Tecnologias Utilizadas
 * **Frontend:** HTML5, CSS3, templates Jinja2.
 * **Backend:** Python 3, Flask.
-* **Armazenamento:** Persistência de dados baseada em banco de dados (SQLAlchemy.
+* **Armazenamento:** Persistência de dados baseada em banco de dados (SQLAlchemy).
 * **Gestão e Versionamento:** Git, GitHub (Projects, Issues).
 * **Modelagem:** Casos de Uso (draw.io) e BDD (Gherkin).
 * **Arquitetura:** MVC - Model View Controller

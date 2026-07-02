@@ -35,7 +35,7 @@ O sistema deverá possuir dois perfis principais de acesso. O primeiro será o a
 | RF06 | Persistência de Dados | O sistema deve salvar o catálogo, os usuários e o status de conclusão das aulas em um Banco de Dados relacional (SQLite) e registrar logs do usuário em arquivo csv. |
 | RF07 | Contato e feedback | Página “Sobre” com o link do Github do projeto e os devidos créditos. |
 | RF08 | Cadastro de Usuário | O sistema deve permitir que novos visitantes criem uma conta de acesso preenchendo um formulário com seus dados. |
-| RF09 | Gerenciamento de Catálogo (Admin) | O sistema deve possuir uma rota restrita onde um administrador consiga adicionar novos cursos ao banco de dados via formulário e visualizar os cursos existentes em uma tabela. |
+| RF09 | Gerenciamento de Catálogo e Usuários (Admin) | O sistema deve possuir uma rota restrita onde um administrador consiga adicionar novos cursos ao banco de dados via formulário, visualizar os cursos existentes em uma tabela e gerenciar privilégios dos usuários através de uma tabela que lista todos eles |
 | RF10 | Feedback Visual (Sessões HTTP) | O sistema deve utilizar sessões para retornar notificações dinâmicas (mensagens de sucesso, erro ou alertas) após as ações do usuário. |
 | RF11 | Perfil do Aluno | O sistema deve exibir uma página contendo os dados cadastrais do aluno logado e um resumo de quais cursos foram iniciados e finalizados. |
 | RF12 | Tratamento de Exceções | O sistema deve validar as entradas de dados (como tentativa de login incorreto ou cadastro duplicado) e impedir operações inválidas, comunicando o erro de forma clara. |
@@ -125,7 +125,7 @@ Então o sistema deve atualizar o campo concluida daquela aula no Banco de Dados
 
 E a página deve recarregar exibindo a barra de progresso preenchida proporcionalmente.
 
-**[UC05] Moderação de Catálogo (Painel Administrativo)**
+**[UC05] Moderação de Catálogo e Usuários (Painel Administrativo)**
 
 Como um Administrador, eu quero acessar um painel restrito para adicionar novos cursos ao catálogo ou remover cursos antigos, garantindo que a plataforma esteja sempre atualizada. (RF09)
 
@@ -136,6 +136,19 @@ Quando preenche o formulário com Título, Categoria e Link do YouTube
 E clica em salvar
 Então o sistema deve anexar as informações em uma nova linha no banco de dados
 E a tabela de listagem HTML na mesma página deve ser atualizada para exibir o novo curso.
+
+Cenário 2: Exclusão de curso
+Dado que o administrador acessou o painel de controle
+Quando acessa a tabela de cursos adicionados
+E clica no botão "Excluir" em determinado curso
+Então o sistema deve deletar o curso e o progresso de todos os usuários que interagiram com aquele curso
+
+Cenário 3: Gerenciar privilégios de usuário
+Dado que o administrador acessou o painel de controle
+Quando acessa a tabela de usuários
+E clica no botão "Tornar admin" em determinado usuário
+Então o sistema concede acesso à rota do painel administrativo para o usuário contemplado
+
 
 **[UC06] Painel de Perfil do Aluno**
 

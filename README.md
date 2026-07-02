@@ -13,10 +13,33 @@ O **Tech2ALL** é um Sistema de Gestão de Aprendizagem (LMS) simplificado onde 
 * **Modelagem:** Casos de Uso (draw.io) e BDD (Gherkin).
 * **Arquitetura:** MVC - Model View Controller
 
-## Funcionalidades Principais (Completo na Especificação de Requisitos)
-* Catálogo dinâmico de cursos.
-* Interface responsiva com formulários, tabelas de progresso e listas de módulos.
-* Sistema de acompanhamento de progresso com sessões HTTP (Flask sessions).
+## Funcionalidades Implementadas
+
+**Visitante**
+- Visualizar página inicial (Landing page com apresentação da plataforma)
+- Acessar a página institucional
+- Criar conta de acesso (com validação anti-duplicidade de e-mail)
+- Realizar login no sistema
+
+**Aluno**
+- Consultar catálogo dinâmico de cursos organizados por categorias (Frontend, Backend, Dados)
+- Acessar a página de detalhes do curso com redirecionamento direto para a playlist nativa do YouTube
+- Gerenciar o próprio aprendizado através de uma To-Do List
+- Acompanhar a porcentagem de conclusão do curso em tempo real através de uma barra de progresso visual
+- Visualizar painel de perfil com dados cadastrais e um resumo geral de desempenho (contagem de cursos iniciados e concluídos)
+- Realizar logout da plataforma
+
+**Administrador**
+- Acessar painel restrito de moderação
+- Cadastrar novos cursos e playlists no catálogo via formulário
+- Visualizar listagem em tabela dos cursos já existentes na plataforma
+- Gerenciar privilégios de usuário
+
+**Sistema**
+- Criptografia de senhas garantindo a segurança das credenciais no banco de dados
+- Gestão de sessões de usuário protegidas via Flask-Login
+- Geração automática de logs de auditoria em formato `.csv`
+- Feedback visual dinâmico com notificações em tela (Flash messages) para ações de sucesso ou erro
 
 ## Especificação do Projeto, Diagrama Arquitetural e Diagrama de Casos de Uso (png e Mermaid)
 * [Especificação de Requisitos](./especificacao-requisitos.md)
@@ -25,15 +48,15 @@ O **Tech2ALL** é um Sistema de Gestão de Aprendizagem (LMS) simplificado onde 
 * [Mermaid](./codigomermaidUC.txt)
 
 ## Equipe
-Pedro Gomes de Andrade Neto
-
-João Freires de Amorim Neto
-
-Emanuel Victor Ribeiro Saturnino
+| Nomes |
+|------|
+| Pedro Gomes de Andrade Neto |
+| Emanuel Victor Saturnino |
+| João Freires Amorim Neto |
 
 ## Estrutura do Projeto
 ```
-LMS-project-ifpb/tech2all
+tech2all-LMS/tech2all
  ├── app.py                # Arquivo principal da aplicação
  ├── .env.example          # Arquivo exemplo para variáveis de ambiente
  ├── instance/
@@ -66,11 +89,11 @@ LMS-project-ifpb/tech2all
 
 ## Como executar localmente
 Clone o repositório:
-```git clone https://github.com/pedro-g-neto/LMS-project-ifpb.git```
+```git clone https://github.com/pedro-g-neto/tech2all-LMS.git```
 
 
 Acesse o diretório do projeto:
-```cd LMS-project-ifpb```
+```cd tech2all-LMS```
 
 Crie e ative o ambiente virtual:
 
